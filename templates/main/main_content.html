@@ -1,0 +1,189 @@
+<!--====== ABOUT PART START ======-->
+{% load static %}
+{% load i18n %}
+{% load custom_filters %}
+
+<section id="about" class="about_area pt-130 pb-130">
+    <div class="about_wrapper">
+        <div class="about_image bg_cover" style="background-image: url({% static 'images/about_image.jpg' %})"></div> <!-- about image -->
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-6">
+                    <div class="about_content">
+                        <div class="section_title">
+                            <h3 class="title">{% trans "About Us" %} <br> TraveLand {% trans "in" %} <span>{% trans "Numbers" %}</span></h3>
+                            <p>
+                                {% trans "Kami adalah perusahaan yang berfokus pada pengalaman wisata luar biasa. Dengan lebih dari 500 perjalanan yang telah kami lakukan, kami terus berkembang dan memberikan pelayanan terbaik untuk klien korporat dan individu. Kami juga telah mengunjungi lebih dari 35 negara, memberikan pengalaman yang tak terlupakan bagi semua pelanggan kami." %}
+                            </p>
+                        </div> <!-- section title -->
+                        <a href="javascript:void(0)" class="main-btn">{% trans "Read More" %}</a>
+                    </div> <!-- about content -->
+                    <div class="about_counter d-flex flex-wrap">
+                        <div class="single_counter counter_1 d-flex justify-content-center align-items-center wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                            <div class="counter_wrapper">
+                                <span class="counter">534</span>
+                                <p>{% trans "Trips Done" %}</p>
+                            </div> <!-- single wrapper -->
+                        </div> <!-- single counter -->
+                        
+                        <div class="single_counter counter_2 d-flex justify-content-center align-items-center wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                            <div class="counter_wrapper">
+                                <span class="counter">424</span>
+                                <p>{% trans "Corporate Clients" %}</p>
+                            </div> <!-- single wrapper -->
+                        </div> <!-- single counter -->
+                        
+                        <div class="single_counter counter_2 d-flex justify-content-center align-items-center wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                            <div class="counter_wrapper">
+                                <span class="counter">35</span>
+                                <p>{% trans "Visited Countries" %}</p>
+                            </div> <!-- single wrapper -->
+                        </div> <!-- single counter -->
+                        
+                        <div class="single_counter counter_1 d-flex justify-content-center align-items-center wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="1.1s">
+                            <div class="counter_wrapper">
+                                <span class="counter">15</span>
+                                <p>{% trans "Team Members" %}</p>
+                            </div> <!-- single wrapper -->
+                        </div> <!-- single counter -->
+                    </div> <!-- about_counter -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> <!-- about wrapper -->
+</section>
+<!--====== ABOUT PART ENDS ======-->
+
+<!-- Promotions Section Start -->
+<section id="promo" class="promotions-section">
+    <h2>{% trans "Exclusive Promotions" %}</h2>
+    <div class="container">
+        <div class="row">
+            {% for promo in promos %}
+            <div class="col-md-4 promo-item">
+                <img src="{{promo.gambar}}" alt="{{ promo.nama }}">
+                <h3>{{ promo.nama }}</h3>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- Promotions Section End -->
+
+<!--====== SERVICES PART START ======-->
+
+<section id="services" class="services_area pt-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section_title text-center pb-25">
+                    <h3 class="title">{% trans "Service We Provide" %}</h3>
+                    <p>{% trans "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianum eirmod tempor invidunt ut labore et dolore magna" %}</p>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <div class="row">
+            {% for kategori in categories %}
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_service mt-30 text-center wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <div class="services_icon">
+                            <i class="lni lni-{{ kategori.icon_class }}"></i>  <!-- Replace with dynamic icon class -->
+                        </div>
+                        <div class="services_content">
+                            <h4 class="title">{{ kategori.nama_kategori }}</h4>  <!-- Replace with dynamic category name -->
+                            <p>{{ kategori.deskripsi_kategori }}</p>  <!-- Replace with dynamic description -->
+                        </div>
+                    </div> <!-- single service -->
+                </div>
+            {% endfor %}
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+
+<!-- Best Products Section Start -->
+<section id="best_products" class="best-products-section">
+    <h2>{% trans "Explore Our Best Experiences" %}</h2>
+    <div class="container">
+        <div class="row">
+            {% for content in contents %}
+                <div class="col-lg-3 col-md-4 col-sm-6 product-item">
+                    <img src="{{ content.gambar }}" alt="{{ content.nama_konten }}">
+                    <h3>{{ content.nama_konten }}</h3>
+                    <p><strong>{{ content.subkategori.kategori }}</strong></p>
+                    <p>{{ content.subkategori.nama_subkategori }}</p>
+                    <p class="review">
+                        <span>{{ "⭐"|repeat:content.avg_rating }}</span>
+                        ({{ content.avg_rating|floatformat:1 }}/5, {{ content.review_count }} Reviews)
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- Best Products Section End -->
+
+<!--====== BLOG PART START ======-->
+<section id="blog" class="blog_area pt-120 pb-130">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section_title text-center pb-25">
+                    <h3 class="title">{% trans "Recent Blog Post" %}</h3>
+                    <p>{% trans "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianum eirmod tempor invidunt ut labore et dolore magna" %}</p>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        
+        <div class="row">
+            <!-- Artikel terbaru di sebelah kiri (grid besar) -->
+            <div class="col-lg-6">
+                <div class="single_blog mt-30">
+                    <div class="blog_image">
+                        <img src="{{ latest_article.gambar }}" alt="blog">
+                    </div>
+                    <div class="blog_content">
+                        <div class="blog_meta">
+                            <ul>
+                                <li>{% trans "Posted by:" %} <a href="javascript:void(0)">{{ latest_article.user.username }}</a></li>
+                                <li class="date">{{ latest_article.tanggal_post|date:"d F Y" }}</li>
+                            </ul>
+                        </div>
+                        <h4 class="blog_title"><a href
+                            <h4 class="blog_title"><a href="{{ latest_article.url }}">{{ latest_article.judul }}</a></h4>
+                            <p>{{ latest_article.deskripsi }}</p>
+                            <p>{{ latest_article.konten|truncatewords:20 }}</p>
+                            <a href="{{ latest_article.url }}" class="read_more">{% trans "Read More" %}</a>
+                        </div> <!-- blog content -->
+                    </div> <!-- single blog -->
+                </div>
+    
+                <!-- Artikel lainnya di sebelah kanan (grid kecil) -->
+                <div class="col-lg-6">
+                    <div class="row">
+                        {% for article in other_articles %}
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single_blog mt-30">
+                                    <div class="blog_image">
+                                        <img src="{{ article.gambar }}" alt="blog">
+                                    </div>
+                                    <div class="blog_content">
+                                        <div>
+                                            <ul>
+                                                <li>{% trans "Posted by:" %} <a style="color:#747E88" href="javascript:void(0)">{{ article.user.username }}</a></li>
+                                                <li class="date">{{ article.tanggal_post|date:"d F Y" }}</li>
+                                            </ul>
+                                        </div>
+                                        <h4 class="blog_title"><a href="{{ article.url }}">{{ article.judul }}</a></h4>
+                                        <p>{{ article.deskripsi }}</p>
+                                        <p>{{ article.konten|truncatewords:20 }}</p>
+                                        <a href="{{ article.url }}" class="read_more">{% trans "Read More" %}</a>
+                                    </div> <!-- blog content -->
+                                </div> <!-- single blog -->
+                            </div>
+                        {% endfor %}
+                    </div> <!-- row -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== BLOG PART END ======-->

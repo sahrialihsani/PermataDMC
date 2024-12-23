@@ -1,0 +1,128 @@
+#. Translator: Nama Anda
+#. Last-Translator: Nama Anda
+#. Language-Team: Nama Tim Terjemahan
+#. Content-Type: text/plain; charset=UTF-8
+#. Content-Transfer-Encoding: 8bit
+#. PO-Revision-Date: 2024-12-23
+#. Language: en
+#. Plural-Forms: nplurals=2; plural=(n > 1);
+
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "About"
+msgstr "About"
+
+msgid "Promo"
+msgstr "Promo"
+
+msgid "Products"
+msgstr "Products"
+
+msgid "Best Products"
+msgstr "Best Products"
+
+msgid "Best Product"
+msgstr "Best Product"
+
+msgid "Point"
+msgstr "Point"
+
+msgid "English"
+msgstr "English"
+
+msgid "Indonesia"
+msgstr "Indonesia"
+
+msgid "Français"
+msgstr "Français"
+
+msgid "Logout"
+msgstr "Logout"
+
+msgid "Login/Signup"
+msgstr "Login/Signup"
+
+msgid "Explore The World with"
+msgstr "Explore The World with"
+
+msgid "TraveLand"
+msgstr "TraveLand"
+
+msgid "Lorem ipsum dolor amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidun dolore."
+msgstr "Lorem ipsum dolor amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidun dolore."
+
+msgid "Book Now"
+msgstr "Book Now"
+
+msgid "About Us"
+msgstr "About Us"
+
+msgid "Numbers"
+msgstr "Numbers"
+
+msgid "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianum eirmod tempor invidunt ut labore et dolore magna aliqyam era sed diam voluptua. At vero eos et accusam etjusto duo dolres etea reb. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+msgstr "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianum eirmod tempor invidunt ut labore et dolore magna aliqyam era sed diam voluptua. At vero eos et accusam etjusto duo dolres etea reb. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+
+msgid "Trips Done"
+msgstr "Trips Done"
+
+msgid "Corporate Clients"
+msgstr "Corporate Clients"
+
+msgid "Visited Countries"
+msgstr "Visited Countries"
+
+msgid "Team Members"
+msgstr "Team Members"
+
+msgid "Exclusive Promotions"
+msgstr "Exclusive Promotions"
+
+msgid "Service We Provide"
+msgstr "Service We Provide"
+
+msgid "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianum eirmod tempor invidunt ut labore et dolore magna"
+msgstr "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianum eirmod tempor invidunt ut labore et dolore magna"
+
+msgid "Explore Our Best Experiences"
+msgstr "Explore Our Best Experiences"
+
+msgid "Recent Blog Post"
+msgstr "Recent Blog Post"
+
+msgid "Posted by"
+msgstr "Posted by"
+
+msgid "Read More"
+msgstr "Read More"
+
+msgid "Travel with us to discover amazing destinations around the world!"
+msgstr "Travel with us to discover amazing destinations around the world!"
+
+msgid "Quick Links"
+msgstr "Quick Links"
+
+msgid "Currency"
+msgstr "Currency"
+
+msgid "Contact Us"
+msgstr "Contact Us"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Phone"
+msgstr "Phone"
+
+msgid "Article"
+msgstr "Article"
+
+msgid "Our Product"
+msgstr "Our Product"

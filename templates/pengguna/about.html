@@ -1,0 +1,149 @@
+{% load static %}
+{% load i18n %}
+
+<!doctype html>
+<html class="no-js' %}" lang="en">
+
+<head>    
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>User Dashboard</title>
+    
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/png">
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+        
+    <!--====== Nice Select CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+        
+        
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/LineIcons.2.0.css' %}">
+        
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.4.5.2.min.css' %}">
+    
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/default.css' %}">
+    
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+</head>
+<body>
+    <!-- Navigation Bar -->
+    {% include 'main/preloader.html' %}
+    {% include 'main/navbar_no_slider.html' %}
+                
+    <section id="about" class="about_area pt-130 pb-130">
+        <div class="about_wrapper">
+            <div class="about_image bg_cover" style="background-image: url({% static 'images/about_image.jpg' %})"></div> <!-- about image -->
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col-lg-6">
+                        <div class="about_content">
+                            <div class="section_title">
+                                <h3 class="title">{% trans "About Us" %} <br> TraveLand {% trans "in" %} <span>{% trans "Numbers" %}</span></h3>
+                                <p>
+                                    {% trans "Kami adalah perusahaan yang berfokus pada pengalaman wisata luar biasa. Dengan lebih dari 500 perjalanan yang telah kami lakukan, kami terus berkembang dan memberikan pelayanan terbaik untuk klien korporat dan individu. Kami juga telah mengunjungi lebih dari 35 negara, memberikan pengalaman yang tak terlupakan bagi semua pelanggan kami." %}
+                                </p>
+                            </div> <!-- section title -->
+                        </div> <!-- about content -->
+                        <div class="about_counter d-flex flex-wrap">
+                            <div class="single_counter counter_1 d-flex justify-content-center align-items-center wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                                <div class="counter_wrapper">
+                                    <span class="counter">534</span>
+                                    <p>{% trans "Trips Done" %}</p>
+                                </div> <!-- single wrapper -->
+                            </div> <!-- single counter -->
+                            
+                            <div class="single_counter counter_2 d-flex justify-content-center align-items-center wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                                <div class="counter_wrapper">
+                                    <span class="counter">424</span>
+                                    <p>{% trans "Corporate Clients" %}</p>
+                                </div> <!-- single wrapper -->
+                            </div> <!-- single counter -->
+                            
+                            <div class="single_counter counter_2 d-flex justify-content-center align-items-center wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                                <div class="counter_wrapper">
+                                    <span class="counter">35</span>
+                                    <p>{% trans "Visited Countries" %}</p>
+                                </div> <!-- single wrapper -->
+                            </div> <!-- single counter -->
+                            
+                            <div class="single_counter counter_1 d-flex justify-content-center align-items-center wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="1.1s">
+                                <div class="counter_wrapper">
+                                    <span class="counter">15</span>
+                                    <p>{% trans "Team Members" %}</p>
+                                </div> <!-- single wrapper -->
+                            </div> <!-- single counter -->
+                        </div> <!-- about_counter -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- about wrapper -->
+    </section>
+    <!--====== ABOUT PART ENDS ======-->
+    
+    {% include 'main/footer.html' %}
+
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    
+    <!--====== PART START ======-->
+
+<!--
+    <section class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+
+    <!--====== PART ENDS ======-->
+
+
+    <!--====== Jquery js ======-->
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/vendor/modernizr-3.7.1.min.js' %}"></script>
+    
+    <!--====== Bootstrap js ======-->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.4.5.2.min.js' %}"></script>
+
+    
+    <!--====== Scrolling Nav js ======-->
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/scrolling-nav.js' %}"></script>
+    
+    <!--====== Counter Up js ======-->
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    
+    <!--====== Nice Select js ======-->
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    
+    <!--====== WOW js ======-->
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    
+    <!--====== Main js ======-->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script>
+        var logoUrl = "{% static 'images/logo.svg' %}";
+        var logo2Url = "{% static 'images/logo-2.svg' %}";
+    </script>
+</body>
+</html>

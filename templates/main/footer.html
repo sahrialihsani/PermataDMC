@@ -1,0 +1,63 @@
+<!--====== FOOTER PART START ======-->
+{% load static %}
+{% load i18n %}
+
+<section id="footer" class="footer_area">
+    <div class="footer_widget pt-50 pb-30">
+        <div class="container">
+            <div class="row">
+                <!-- Footer About Section -->
+                <div class="col-md-4">
+                    <div class="footer_about">
+                        <a href="#"><img src="{% static 'images/logo.png' %}" alt="logo" class="footer-logo"></a>
+                        <p>{% trans "Travel with us to discover amazing destinations around the world!" %}</p>
+                    </div>
+                </div>
+
+                <!-- Footer Quick Links Section -->
+                <div class="col-md-3 mt-4">
+                    <div class="footer_links">
+                        <h5>{% trans "Quick Links" %}</h5>
+                        <ul>
+                            <li><a href="#">{% trans "Home" %}</a></li>
+                            <li><a href="#about">{% trans "Abou" %}t</a></li>
+                            <li><a href="#promo">{% trans "Promo" %}</a></li>
+                            <li><a href="#services">{% trans "Our Product" %}</a></li>
+                            <li><a href="#best_products">{% trans "Best Product" %}</a></li>
+                            <li><a href="#blog">{% trans "Article" %}</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Currency and Contact Us Section -->
+                <div class="col-md-3 mt-3 d-flex flex-column align-items-center justify-content-start">
+                    <div class="footer_currency text-center">
+                        <h5>{% trans "Currency" %}</h5>
+                        <select id="currency-selector" class="form-control">
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="IDR">IDR</option>
+                        </select>
+                    </div>
+                    <!-- Contact Us Inside Currency Column -->
+                    <div class="footer_contact mt-4 text-center">
+                        <h5>{% trans "Contact Us" %}</h5>
+                        <p>permatadmc@gmail.com</p>
+                        <p>{% trans "Phone" %}: +1 234 567 890</p>
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> <!-- footer widget -->
+</section>
+
+<!-- Footer Copyright Section -->
+<div class="footer_bottom">
+    <div class="container text-center mt-3">
+        <p>&copy; 2024 Permata DMC. All rights reserved.</p>
+        <p class="font-weight-light">Crafted with care by <a href="https://uideck.com/" target="_blank" class="text-primary font-weight-bold">Ui Deck</a></p> 
+    </div>
+</div>
+
+<!--====== FOOTER PART ENDS ======-->

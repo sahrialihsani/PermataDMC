@@ -1,0 +1,131 @@
+#. Translator: Nama Anda
+#. Last-Translator: Nama Anda
+#. Language-Team: Nama Tim Terjemahan
+#. Content-Type: text/plain; charset=UTF-8
+#. Content-Transfer-Encoding: 8bit
+#. PO-Revision-Date: 2024-12-23
+#. Language: fr
+#. Plural-Forms: nplurals=2; plural=(n > 1);
+
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+
+msgid "Home"
+msgstr "Accueil"
+
+msgid "About"
+msgstr "Quelque"
+
+msgid "Promo"
+msgstr "Promotion"
+
+msgid "Products"
+msgstr "Produits"
+
+msgid "Best Products"
+msgstr "Top Produits"
+
+msgid "Point"
+msgstr "Point"
+
+msgid "English"
+msgstr "Anglais"
+
+msgid "Indonesia"
+msgstr "Indonésien"
+
+msgid "Français"
+msgstr "Français"
+
+msgid "Logout"
+msgstr "Déconnexion"
+
+msgid "Login/Signup"
+msgstr "Login / S'inscrire"
+
+msgid "Explore The World with"
+msgstr "Explorez le monde avec"  # Terjemahan ke dalam bahasa Prancis
+
+msgid "TraveLand"
+msgstr "TraveLand"  # Jika nama ini tidak perlu diterjemahkan
+
+msgid "Lorem ipsum dolor amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidun dolore."
+msgstr "Lorem ipsum dolor amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidun dolore."  # Ini adalah teks placeholder dan biasanya tidak diterjemahkan, kecuali jika Anda mau mengubahnya.
+
+msgid "Book Now"
+msgstr "Réservez maintenant"  # Terjemahan ke dalam bahasa Prancis
+
+msgid "About Us"
+msgstr "À propos de nous"
+
+msgid "in"
+msgstr "en"
+
+msgid "Numbers"
+msgstr "Chiffres"
+
+msgid "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianum eirmod tempor invidunt ut labore et dolore magna aliqyam era sed diam voluptua. At vero eos et accusam etjusto duo dolres etea reb. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+msgstr "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianum eirmod tempor invidunt ut labore et dolore magna aliqyam era sed diam voluptua. At vero eos et accusam etjusto duo dolres etea reb. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+
+msgid "Trips Done"
+msgstr "Voyages effectués"
+
+msgid "Corporate Clients"
+msgstr "Clients corporatifs"
+
+msgid "Visited Countries"
+msgstr "Pays visités"
+
+msgid "Team Members"
+msgstr "Membres de l'équipe"
+
+msgid "Exclusive Promotions"
+msgstr "Promotions exclusives"
+
+msgid "Service We Provide"
+msgstr "Service que nous fournissons"
+
+msgid "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianum eirmod tempor invidunt ut labore et dolore magna"
+msgstr "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianum eirmod tempor invidunt ut labore et dolore magna"
+
+msgid "Explore Our Best Experiences"
+msgstr "Découvrez nos meilleures expériences"
+
+msgid "Recent Blog Post"
+msgstr "Article de blog récent"
+
+msgid "Posted by"
+msgstr "Publié par"
+
+msgid "Read More"
+msgstr "Lire la suite"
+
+msgid "Travel with us to discover amazing destinations around the world!"
+msgstr "Voyagez avec nous pour découvrir des destinations incroyables à travers le monde !"
+
+msgid "Quick Links"
+msgstr "Liens rapides"
+
+msgid "Currency"
+msgstr "Monnaie"
+
+msgid "Contact Us"
+msgstr "Contactez-nous"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Phone"
+msgstr "Téléphone"
+
+msgid "Article"
+msgstr "Article"
+
+msgid "Our Product"
+msgstr "Nos Produits"
+
+msgid "Best Product"
+msgstr "Meilleur Produit"

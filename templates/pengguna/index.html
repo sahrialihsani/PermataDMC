@@ -1,0 +1,170 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js' %}" lang="en">
+
+<head>    
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>TraveLand - Tour and Travel Agency Template</title>
+    
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/png">
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+        
+    <!--====== Nice Select CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+        
+        
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/LineIcons.2.0.css' %}">
+        
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.4.5.2.min.css' %}">
+    
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/default.css' %}">
+    
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+</head>
+
+<body>
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+    {% include 'main/preloader.html' %}
+
+    {% include 'main/navbar.html' %}
+
+    {% include 'main/main_content.html' %}
+    
+    <!--====== CONTACT PART ENDS ======-->
+    
+    {% include 'main/footer.html' %}
+
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    
+    <!--====== PART START ======-->
+
+<!--
+    <section class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+
+    <!--====== PART ENDS ======-->
+
+ <!-- Menambahkan i18next CDN -->
+ <script src="https://cdn.i18next.com/i18next.min.js"></script>
+ <script>
+     i18next.init({
+         lng: 'en', // Bahasa default
+         resources: {
+             en: {
+                 translation: {
+                     "home": "Home",
+                     "about": "About",
+                     "promo": "Promo",
+                     "products": "Products",
+                     "best_products": "Best Products",
+                     "login_signup": "Login/Signup",
+                     "logout": "Logout",
+                     "explore_title": "Explore The World with TraveLand",
+                     "explore_desc": "Lorem ipsum dolor amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidun dolore.",
+                     "book_now": "Book Now",
+                     "english": "English",
+                     "indonesia": "Indonesia",
+                     "french": "Français"
+                 }
+             },
+             id: {
+                 translation: {
+                     "home": "Beranda",
+                     "about": "Tentang Kami",
+                     "promo": "Promo",
+                     "products": "Produk",
+                     "best_products": "Produk Terbaik",
+                     "login_signup": "Masuk/Daftar",
+                     "logout": "Keluar",
+                     "explore_title": "Jelajahi Dunia dengan TraveLand",
+                     "explore_desc": "Lorem ipsum dolor amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidun dolore.",
+                     "book_now": "Pesan Sekarang",
+                     "english": "English",
+                     "indonesia": "Indonesia",
+                     "french": "Français"
+                 }
+             },
+             fr: {
+                 translation: {
+                     "home": "Accueil",
+                     "about": "À propos",
+                     "promo": "Promo",
+                     "products": "Produits",
+                     "best_products": "Meilleurs Produits",
+                     "login_signup": "Connexion/Inscription",
+                     "logout": "Se Déconnecter",
+                     "explore_title": "Explorez le monde avec TraveLand",
+                     "explore_desc": "Lorem ipsum dolor amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidun dolore.",
+                     "book_now": "Réserver Maintenant",
+                     "english": "Anglais",
+                     "indonesia": "Indonésien",
+                     "french": "Français"
+                 }
+             }
+         }
+     });
+     
+ </script>
+    <!--====== Jquery js ======-->
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/vendor/modernizr-3.7.1.min.js' %}"></script>
+    
+    <!--====== Bootstrap js ======-->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.4.5.2.min.js' %}"></script>
+
+    
+    <!--====== Scrolling Nav js ======-->
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/scrolling-nav.js' %}"></script>
+    
+    <!--====== Counter Up js ======-->
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    
+    <!--====== Nice Select js ======-->
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    
+    <!--====== WOW js ======-->
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    
+    <!--====== Main js ======-->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script>
+        var logoUrl = "{% static 'images/logo.svg' %}";
+        var logo2Url = "{% static 'images/logo-2.svg' %}";
+    </script>
+
+    
+</body>
+
+</html>

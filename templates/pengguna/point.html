@@ -1,0 +1,139 @@
+{% load static %}
+{% load i18n %}
+
+<!doctype html>
+<html class="no-js' %}" lang="en">
+
+<head>    
+    <meta charset="utf-8">
+    <!--====== Title ======-->
+    <title>User Dashboard</title>
+    
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/png">
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+        
+    <!--====== Nice Select CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+        
+        
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/LineIcons.2.0.css' %}">
+        
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.4.5.2.min.css' %}">
+    
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/default.css' %}">
+    
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+</head>
+<body>
+    <!-- Navigation Bar -->
+    {% include 'main/preloader.html' %}
+    {% include 'main/navbar_no_slider.html' %}
+                
+    <section id="point" class="point_area pt-130 pb-130">
+        <div class="point_wrapper">
+            <div class="container">
+                <div class="row">
+                    <!-- Kolom Kiri: Jumlah Poin -->
+                    <div class="col-lg-6">
+                        <div class="point_left">
+                            <h3 class="title">{% trans "My Points" %}</h3>
+                            <div class="point_counter d-flex flex-wrap">
+                                <div class="single_counter counter_1 d-flex justify-content-center align-items-center wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                                    <div class="counter_wrapper">
+                                        <span class="counter">{{user_points}}</span> <!-- Contoh nilai poin -->
+                                        <p>{% trans "Total Points" %}</p>
+                                    </div> <!-- single wrapper -->
+                                </div> <!-- single counter -->
+                            </div> <!-- point_counter -->
+                        </div> <!-- point_left -->
+                    </div>
+    
+                    <!-- Kolom Kanan: Alasan Pentingnya Poin -->
+                    <div class="col-lg-6">
+                        <div class="point_right">
+                            <h3 class="title">{% trans "Why Your Points Matter" %}</h3>
+                            <p>{% trans "Poin Anda sangat berharga! Berikut adalah beberapa alasan mengapa penting untuk mengumpulkan poin:" %}</p>
+                            <ul>
+                                <li>{% trans "Tukarkan poin untuk mendapatkan promo eksklusif dan diskon perjalanan." %}</li>
+                                <li>{% trans "Gunakan poin untuk upgrade layanan ke premium atau VIP." %}</li>
+                                <li>{% trans "Semakin banyak poin, semakin besar keuntungan Anda!" %}</li>
+                            </ul>
+                            <p>
+                                {% trans "Jangan lupa untuk terus mengumpulkan poin saat Anda menggunakan layanan kami. Promo menarik menanti Anda!" %}
+                            </p>
+                        </div> <!-- point_right -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- point_wrapper -->
+    </section>
+    <!--====== ABOUT PART ENDS ======-->
+    
+    {% include 'main/footer.html' %}
+
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->
+    
+    <!--====== PART START ======-->
+
+<!--
+    <section class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+
+    <!--====== PART ENDS ======-->
+
+
+    <!--====== Jquery js ======-->
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/vendor/modernizr-3.7.1.min.js' %}"></script>
+    
+    <!--====== Bootstrap js ======-->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.4.5.2.min.js' %}"></script>
+
+    
+    <!--====== Scrolling Nav js ======-->
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/scrolling-nav.js' %}"></script>
+    
+    <!--====== Counter Up js ======-->
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    
+    <!--====== Nice Select js ======-->
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    
+    <!--====== WOW js ======-->
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    
+    <!--====== Main js ======-->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script>
+        var logoUrl = "{% static 'images/logo.svg' %}";
+        var logo2Url = "{% static 'images/logo-2.svg' %}";
+    </script>
+</body>
+</html>

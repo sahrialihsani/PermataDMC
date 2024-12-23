@@ -1,0 +1,131 @@
+#. Translator: Nama Anda
+#. Last-Translator: Nama Anda
+#. Language-Team: Nama Tim Terjemahan
+#. Content-Type: text/plain; charset=UTF-8
+#. Content-Transfer-Encoding: 8bit
+#. PO-Revision-Date: 2024-12-23
+#. Language: id
+#. Plural-Forms: nplurals=2; plural=(n > 1);
+
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
+
+msgid "Home"
+msgstr "Beranda"
+
+msgid "About"
+msgstr "Tentang Kami"
+
+msgid "Promo"
+msgstr "Promo"
+
+msgid "Products"
+msgstr "Produk"
+
+msgid "Best Products"
+msgstr "Produk Terbaik"
+
+msgid "Point"
+msgstr "Poin"
+
+msgid "English"
+msgstr "Inggris"
+
+msgid "Indonesia"
+msgstr "Indonesia"
+
+msgid "Français"
+msgstr "Prancis"
+
+msgid "Logout"
+msgstr "Keluar"
+
+msgid "Login/Signup"
+msgstr "Masuk/Daftar"
+
+msgid "Explore The World with"
+msgstr "Jelajahi Dunia dengan"
+
+msgid "TraveLand"
+msgstr "TraveLand"
+
+msgid "Lorem ipsum dolor amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidun dolore."
+msgstr "Lorem ipsum dolor amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidun dolore."
+
+msgid "Book Now"
+msgstr "Pesan Sekarang"
+
+msgid "About Uss"
+msgstr "Tentang Kami"
+
+msgid "in"
+msgstr "dalam"
+
+msgid "Numbers"
+msgstr "Angka"
+
+msgid "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianum eirmod tempor invidunt ut labore et dolore magna aliqyam era sed diam voluptua. At vero eos et accusam etjusto duo dolres etea reb. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+msgstr "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianum eirmod tempor invidunt ut labore et dolore magna aliqyam era sed diam voluptua. At vero eos et accusam etjusto duo dolres etea reb. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+
+msgid "Read More"
+msgstr "Baca Selengkapnya"
+
+msgid "Trips Done"
+msgstr "Perjalanan Selesai"
+
+msgid "Corporate Clients"
+msgstr "Klien Korporat"
+
+msgid "Visited Countries"
+msgstr "Negara yang Dikunjungi"
+
+msgid "Team Members"
+msgstr "Anggota Tim"
+
+msgid "Exclusive Promotions"
+msgstr "Promosi Eksklusif"
+
+msgid "Service We Provide"
+msgstr "Layanan yang Kami Sediakan"
+
+msgid "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianum eirmod tempor invidunt ut labore et dolore magna"
+msgstr "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianum eirmod tempor invidunt ut labore et dolore magna"
+
+msgid "Explore Our Best Experiences"
+msgstr "Jelajahi Pengalaman Terbaik Kami"
+
+msgid "Recent Blog Post"
+msgstr "Posting Blog Terbaru"
+
+msgid "Posted by"
+msgstr "Diposting oleh"
+
+msgid "Travel with us to discover amazing destinations around the world!"
+msgstr "Bepergian dengan kami untuk menemukan tujuan luar biasa di seluruh dunia!"
+
+msgid "Quick Links"
+msgstr "Tautan Cepat"
+
+msgid "Currency"
+msgstr "Mata Uang"
+
+msgid "Contact Us"
+msgstr "Hubungi Kami"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Phone"
+msgstr "Telepon"
+
+msgid "Article"
+msgstr "Artikel"
+
+msgid "Our Product"
+msgstr "Produk Kami"
+
+msgid "Best Product"
+msgstr "Produk Terbaik"

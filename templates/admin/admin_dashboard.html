@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content -->
+    <div>
+        {% if user.is_authenticated %}
+            <h2>Welcome, {{ user.username }}!</h2>
+            {% if user.status == 2 %}
+                <h3>Welcome to the Admin Dashboard</h3>
+                <p>Only Admin users can see this page.</p>
+            {% elif user.status == 3 %}
+                <h3>Welcome to the User Dashboard</h3>
+                <p>You do not have access to the Admin Dashboard.</p>
+            {% else %}
+                <p>Access level not recognized.</p>
+            {% endif %}
+        {% else %}
+            <p>Please log in to access this page.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

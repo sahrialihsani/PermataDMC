@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+{% load custom_filters %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Dashboard</title>
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/LineIcons.2.0.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.4.5.2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'main/preloader.html' %}
+    {% include 'main/navbar_no_slider.html' %}
+    <style>
+        /* Modal Overlay */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+            overflow-y: auto;
+        }
+    
+        /* Modal Box */
+        .modal-content {
+            background-color: #ffffff;
+            margin: 10% auto; /* Centered vertically */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+            width: 90%;
+            max-width: 500px;
+            animation: fadeIn 0.3s ease-in-out; /* Smooth animation */
+            position: relative;
+        }
+    
+        /* Close Button */
+        .close {
+            color: #333;
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    
+        .close:hover {
+            color: #d9534f; /* Highlighted color */
+        }
+    
+        /* Form Styling */
+        .modal-content h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            font-size: 24px;
+        }
+    
+        .modal-content label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+            color: #555;
+        }
+    
+        .modal-content input,
+        .modal-content select,
+        .modal-content textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    
+        .modal-content button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+    
+        .modal-content button:hover {
+            background-color: #45a049;
+        }
+    
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <section class="product_detail_area pt-130 pb-130">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="{{ content.gambar }}" alt="{{ content.nama_konten }}" class="img-fluid">
+                </div>
+                <div class="col-lg-6">
+                    <h2>{{ content.nama_konten }}</h2>
+                    <h6>{{ content.harga|rupiah }}</h6>
+                    <p>{{ content.deskripsi_konten }}</p>
+
+                    <h4>{% trans "Experience" %}</h4>
+                    <p>{{ content.experience }}</p>
+
+                    <!-- Booking Modal Trigger -->
+                    <button id="book-wa-btn" class="main-btn">{% trans "Book via WhatsApp" %}</button>
+
+                    <!-- Booking Modal -->
+                    <div id="bookingModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h3>{% trans "Booking Form" %}</h3>
+                            <form id="bookingForm">
+                                <input type="hidden" id="content_id" value="{{ content.id_content }}">
+                                <p id="content_name"><strong>{% trans "Product" %}:</strong> {{ content.nama_konten }}</p>
+                                <p id="content_price"><strong>{% trans "Price" %}:</strong> {{ content.harga|rupiah }}</p>
+                                <label for="jumlah_produk">{% trans "Quantity" %}:</label>
+                                <input type="number" id="jumlah_produk" name="jumlah_produk" placeholder="Enter quantity" required>
+                    
+                                <label for="metode_pembayaran">{% trans "Payment Method" %}:</label>
+                                <select id="metode_pembayaran" name="metode_pembayaran" required>
+                                    <option value="Transfer Bank">{% trans "Bank Transfer" %}</option>
+                                    <option value="COD">{% trans "Cash on Delivery" %}</option>
+                                </select>
+                                <textarea id="deskripsi" name="deskripsi" placeholder="Additional notes"></textarea>
+                    
+                                {% csrf_token %}
+                                <button type="submit">{% trans "Submit Booking" %}</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'main/footer.html' %}
+
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/vendor/modernizr-3.7.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.4.5.2.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/scrolling-nav.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script>
+        $(document).ready(function () {
+            const bookingModal = $('#bookingModal');
+
+            // Open modal
+            $('#book-wa-btn').on('click', function () {
+                bookingModal.show();
+            });
+
+            // Close modal
+            $('.close').on('click', function () {
+                bookingModal.hide();
+            });
+
+            // Handle form submission
+            $('#bookingForm').on('submit', function (e) {
+                e.preventDefault();
+
+                const formData = {
+                    content_id: $('#content_id').val(),
+                    jumlah_produk: $('#jumlah_produk').val(),
+                    metode_pembayaran: $('#metode_pembayaran').val(),
+                    deskripsi: $('#deskripsi').val(),
+                    csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+                };
+
+                $.ajax({
+                    type: 'POST',
+                    url: "{% url 'save_booking_ajax' %}",
+                    data: formData,
+                    success: function (response) {
+                        if (response.success) {
+                            alert(response.message);
+                            let harga = $('#content_price').text().replace(/[^0-9]/g, '');
+                            console.log(harga);
+                            // Hitung total harga
+                            let totalHarga = parseInt(harga);
+                            const pesan = `Halo, saya ingin memesan:\n` +
+                                `Produk: ${$('#content_name').text()}\n` +
+                                `Harga satuan: ${$('#content_price').text()}\n` +
+                                `Jumlah: ${formData.jumlah_produk}\n` +
+                                `Total harga: ${formData.jumlah_produk * totalHarga}\n` +
+                                `Metode pembayaran: ${formData.metode_pembayaran}\n` +
+                                `Catatan: ${formData.deskripsi}`;
+
+                            const whatsappUrl = `https://wa.me/6285700640121?text=${encodeURIComponent(pesan)}`;
+                            window.location.href = whatsappUrl;
+                        } else {
+                            alert(response.message);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error(error);
+                        alert('An error occurred while saving the booking.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

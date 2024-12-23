@@ -1,0 +1,103 @@
+<!--====== HEADER PART START ======-->
+{% load static %}
+{% load i18n %}
+
+<section class="header_area">
+    <div class="header_navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="{% url 'index' %}">
+                            <img src="{% static 'images/logo.png' %}" alt="{% trans 'Logo' %}">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                            <ul id="nav" class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="page-scroll" href="#home" data-i18n="home">{% trans "Home" %}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="page-scroll" href="#about" data-i18n="about">{% trans "About" %}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="page-scroll" href="#promo" data-i18n="promo">{% trans "Promo" %}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="page-scroll" href="#services" data-i18n="products">{% trans "Products" %}</a>
+                                </li>
+                                {% if request.user.is_authenticated %}
+                                <a href="{% url 'point_view' %}" style="margin-top:22px" class="nav-link text-primary font-weight-bold">
+                                    <i class="fa fa-trophy"></i> <!-- Icon for points -->
+                                    {{ user_points }}
+                                </a>
+                                {% endif %}
+
+                                <!-- Icon for user orders (bucket/cart) -->
+                                {% if request.user.is_authenticated %}
+                                <li class="nav-item">
+                                    <a href="{% url 'user_bookings' %}" class="nav-link">
+                                        <i class="fa fa-shopping-basket"></i> <!-- Bucket/cart icon -->
+                                    </a>
+                                </li>
+                                {% endif %}
+
+                                <!-- Dropdown for language selection -->
+                                <li style="margin-top:22px" class="nav-item">
+                                    <div class="dropdown">
+                                        <button class="btn btn-link nav-link dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-globe" style="font-size: 16px;"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                                            <a class="dropdown-item" href="{% url 'set_language' %}?lang=en">
+                                                <i style="color:black" class="fas fa-flag" style="font-size: 16px; margin-right: 5px;"></i>
+                                                <span style="color:black" data-i18n="english">{% trans "English" %}</span>
+                                            </a>
+                                            <a class="dropdown-item" href="{% url 'set_language' %}?lang=id">
+                                                <i style="color:black" class="fas fa-flag" style="font-size: 16px; margin-right: 5px;"></i>
+                                                <span style="color:black" data-i18n="indonesia">{% trans "Indonesia" %}</span>
+                                            </a>
+                                            <a class="dropdown-item" href="{% url 'set_language' %}?lang=fr">
+                                                <i style="color:black" class="fas fa-flag" style="font-size: 16px; margin-right: 5px;"></i>
+                                                <span style="color:black" data-i18n="french">{% trans "Français" %}</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <!-- Login/Logout Button -->
+                            {% if request.user.is_authenticated %}
+                                <a class="btn btn-danger btn-sm ml-3" href="{% url 'logout' %}" data-i18n="logout">{% trans "Logout" %}</a>
+                            {% else %}
+                                <a class="btn btn-primary btn-sm ml-3" href="{% url 'login' %}" data-i18n="login_signup">{% trans "Login/Signup" %}</a>
+                            {% endif %}
+                        </div>
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> <!-- header navbar -->
+
+    <div id="home" class="header_slider">
+        <div class="single_slider bg_cover d-flex align-items-center" style="background-image: url({% static 'images/hero-area.jpg' %})">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8">
+                        <div class="slider_content">
+                            <h2 class="slider_title wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.2s" data-i18n="explore_title">{% trans "Explore The World with" %} <span>{% trans "TraveLand" %}</span></h2>
+                            <p class="wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s" data-i18n="explore_desc">{% trans "Lorem ipsum dolor amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidun dolore." %}</p>
+                            <a href="javascript:void(0)" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s" data-i18n="book_now">{% trans "Book Now" %}</a>
+                        </div> <!-- slider content -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+    </div> <!-- header slider -->
+</section>
+<!--====== HEADER PART ENDS ======-->

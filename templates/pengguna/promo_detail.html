@@ -1,0 +1,156 @@
+{% load static %}
+{% load i18n %}
+{% load custom_filters %}
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Promo Details</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/png">
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/LineIcons.2.0.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.4.5.2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    {% include 'main/preloader.html' %}
+    {% include 'main/navbar_no_slider.html' %}
+    
+    <style>
+        .promo-detail-area {
+            background-color: #f9f9f9;
+            padding: 130px 15px;
+        }
+        
+        .promo-detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .promo-image-detail {
+            flex: 1 1 45%;
+            margin-right: 20px;
+        }
+
+        .promo-image-detail img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .promo-info {
+            flex: 1 1 50%;
+            padding-left: 20px;
+        }
+
+        .promo-info h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .promo-info p {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .promo-info .promo-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .promo-info .promo-expiry {
+            font-size: 1rem;
+            color: #f44336;
+            margin-bottom: 20px;
+        }
+
+        .promo-info .promo-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .promo-info .promo-button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .promo-detail-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .promo-info {
+                padding-left: 0;
+                text-align: center;
+            }
+
+            .promo-image-detail {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+
+    <section id="promo-detail" class="promo-detail-area pt-130 pb-130">
+        <div class="promo-detail-container">
+            <!-- Promo Image Section -->
+            <div class="promo-image-detail">
+                <img src="{{ promo.gambar }}" alt="{{ promo.nama }}" class="promo-image-detail">
+            </div>
+
+            <!-- Promo Information Section -->
+            <div class="promo-info">
+                <h2>{{ promo.nama }}</h2>
+                <!-- Price and Expiry Info -->
+                <p class="promo-price">{{ promo.produk.harga|rupiah }}</p>
+                <p>{{ promo.deskripsi }}</p>
+                <p class="promo-expiry">Expires on: {{ promo.expiry_date }}</p>
+
+                {% comment %} <!-- Call to Action Button -->
+                <a href="#" class="promo-button">Claim Offer</a> {% endcomment %}
+            </div>
+        </div>
+    </section>
+
+    {% include 'main/footer.html' %}
+
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/vendor/modernizr-3.7.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.4.5.2.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/scrolling-nav.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
